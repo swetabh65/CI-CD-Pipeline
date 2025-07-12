@@ -55,3 +55,8 @@ CI-CD-Pipeline/
    ```bash
    git clone https://github.com/swetabh65/CI-CD-Pipeline.git
    cd CI-CD-Pipeline
+
+<img width="1389" height="322" alt="image" src="https://github.com/user-attachments/assets/e94a1603-041b-4e48-ac5f-0911382ae263" />
+
+<img width="818" height="285" alt="image" src="https://github.com/user-attachments/assets/d618308b-3566-4ddf-a461-6633e6649ddc" />
+
