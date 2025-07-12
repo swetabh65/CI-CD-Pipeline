@@ -47,6 +47,30 @@ CI-CD-Pipeline/
 
 <img width="1882" height="881" alt="image" src="https://github.com/user-attachments/assets/b0297f84-e8e8-4df7-8d04-a08a0fed60ad" />
 
+🔁 Jenkins Pipeline Logic
+✅ Jenkinsfile Highlights
+Build: Create virtualenv & install dependencies
+
+Test: Run unit tests via pytest
+
+Deploy: Start Flask app on port 5000 using nohup
+
+Notify: Email on success/failure using Email Extension Plugin
+
+📬 Email Notifications Setup
+Configure SMTP in Jenkins:
+Go to: Manage Jenkins → Configure System
+
+Under Extended E-mail Notification:
+
+SMTP Server: smtp.gmail.com
+SMTP Port: 587
+Use TLS: ✔️
+SMTP Auth: ✔️
+Username: your_email@gmail.com
+App Password: xxxxxxxx (Generated via Google App Passwords)
+
+
 ---
 
 ## ✅ How to Run Locally
@@ -60,3 +84,18 @@ CI-CD-Pipeline/
 
 <img width="818" height="285" alt="image" src="https://github.com/user-attachments/assets/d618308b-3566-4ddf-a461-6633e6649ddc" />
 
+<img width="886" height="501" alt="image" src="https://github.com/user-attachments/assets/fa219aa3-53f2-49ea-8327-bccfcb3fcd98" />
+
+
+📌 Note
+This setup is for learning/demo purposes only. For production deployment, consider using:
+
+Gunicorn + Nginx
+
+Docker containers
+
+Jenkins agents with security hardening
+
+📬 Author
+Swetabh Sonal
+GitHub | LinkedIn
