@@ -2,21 +2,23 @@ pipeline {
     agent any
 
     environment {
-        VENV = 'venv'
+        VENV_DIR = "./venv"
     }
 
     stages {
         stage('Build') {
             steps {
-                sh 'python3 -m venv $VENV'
-                sh './$VENV/bin/pip install --upgrade pip'
-                sh './$VENV/bin/pip install -r requirements.txt'
+                echo '🔧 Creating virtual environment and installing dependencies...'
+                sh 'python3 -m venv $VENV_DIR'
+                sh './venv/bin/pip install --upgrade pip'
+                sh './venv/bin/pip install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                sh './$VENV/bin/python -m pytest'
+                echo '🧪 Running tests...'
+                sh './venv/bin/python -m pytest'
             }
         }
 
@@ -25,22 +27,43 @@ pipeline {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
             }
             steps {
-                sh 'nohup ./$VENV/bin/python app.py > app.log 2>&1 &'
-                echo 'App deployed in background'
+                echo '🚀 Deploying Flask app...'
+                sh 'nohup ./venv/bin/python app.py > flask.log 2>&1 &'
             }
         }
     }
 
     post {
         success {
-            mail to: 'youremail@example.com',
-                 subject: "✅ Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "The Jenkins pipeline for your Flask app ran successfully."
+            echo '✅ Build succeeded. Sending success email...'
+            mail to: 'your_email@gmail.com',
+                 subject: "✅ Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """\
+Hello Swetabh,
+
+Your Jenkins build **${env.JOB_NAME} #${env.BUILD_NUMBER}** succeeded.
+
+🔗 View it here: ${env.BUILD_URL}
+
+Regards,  
+Jenkins CI/CD Bot
+"""
         }
+
         failure {
-            mail to: 'youremail@example.com',
-                 subject: "❌ Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Build failed. Please check Jenkins logs."
+            echo '❌ Build failed. Sending failure email...'
+            mail to: 'your_email@gmail.com',
+                 subject: "❌ Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """\
+Hello Swetabh,
+
+Your Jenkins build **${env.JOB_NAME} #${env.BUILD_NUMBER}** has failed.
+
+🔗 Check the logs: ${env.BUILD_URL}
+
+Regards,  
+Jenkins CI/CD Bot
+"""
         }
     }
 }
