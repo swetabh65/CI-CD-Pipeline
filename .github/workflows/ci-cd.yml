@@ -1,0 +1,43 @@
+name: Flask CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Tests
+        run: pytest
+
+      - name: Build App
+        run: echo "Build stage complete."
+
+  deploy_staging:
+    needs: build
+    if: github.ref == 'refs/heads/staging'
+    runs
+
