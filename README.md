@@ -105,3 +105,24 @@ Merge to main → triggers tests + deploy to production.
 🚀 Deploying to staging...
 ✅ Deployment Complete
 
+
+<img width="593" height="390" alt="image" src="https://github.com/user-attachments/assets/c68077b2-9d5e-4804-abf0-6c7cdcc1775e" />
+
+<img width="1131" height="361" alt="image" src="https://github.com/user-attachments/assets/c3f31637-3165-4a7c-9c0c-21c71645bf13" />
+
+<img width="886" height="111" alt="image" src="https://github.com/user-attachments/assets/47473588-546b-489e-b335-6b7fa43bca17" />
+
+<img width="1110" height="679" alt="image" src="https://github.com/user-attachments/assets/076d4095-a934-4365-9690-715c9f389f6f" />
+
+<img width="947" height="279" alt="image" src="https://github.com/user-attachments/assets/553748ac-4121-4a21-b648-83fff7e9c7ca" />
+
+<img width="569" height="97" alt="image" src="https://github.com/user-attachments/assets/8738b2c8-a2a0-4c88-bccd-0b178cfddf70" />
+
+<img width="1395" height="364" alt="image" src="https://github.com/user-attachments/assets/05f5ad42-626e-4e24-906a-6f4e1313221f" />
+
+<img width="593" height="112" alt="image" src="https://github.com/user-attachments/assets/2be30813-dc82-4fd0-af6e-cf25a258681c" />
+
+
+
+
+
