@@ -105,6 +105,9 @@ Merge to main → triggers tests + deploy to production.
 🚀 Deploying to staging...
 ✅ Deployment Complete
 
+<img width="1462" height="497" alt="image" src="https://github.com/user-attachments/assets/c5b4c833-045b-4e22-b258-deef0edfc9ba" />
+
+
 
 <img width="593" height="390" alt="image" src="https://github.com/user-attachments/assets/c68077b2-9d5e-4804-abf0-6c7cdcc1775e" />
 
@@ -121,6 +124,7 @@ Merge to main → triggers tests + deploy to production.
 <img width="1395" height="364" alt="image" src="https://github.com/user-attachments/assets/05f5ad42-626e-4e24-906a-6f4e1313221f" />
 
 <img width="593" height="112" alt="image" src="https://github.com/user-attachments/assets/2be30813-dc82-4fd0-af6e-cf25a258681c" />
+
 
 
 
